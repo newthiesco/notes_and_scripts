@@ -1,0 +1,54 @@
+
+#Here's the link below to install nexus server
+
+#https://www.fosstechnix.com/how-to-install-nexus-repository-on-ubuntu/
+https://www.youtube.com/watch?v=gq9i3Gqou6A
+
+
+
+#!/bin/bash
+              set -e
+              sudo apt update
+              sudo apt install openjdk-17-jdk -y
+              java -version
+              sudo apt install maven -y
+              mvn --version
+              sudo curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+              echo 'deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian binary/' | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+              sudo apt update
+              sudo apt install jenkins -y
+              sudo systemctl status jenkins
+              sudo systemctl enable --now jenkins
+			  
+			  
+wget https://download.sonatype.com/nexus/3/nexus-3.71.0-06-unix.tar.gz  in /opt
+
+
+sudo mv /opt/nexus-3.71.0-06 /opt/nexus
+
+sudo adduser nexus
+sudo visudo
+nexus ALL=(ALL) NOPASSWD: ALL
+sudo chown -R nexus:nexus /opt/nexus
+sudo chown -R nexus:nexus /opt/sonatype-work
+sudo nano /opt/nexus/bin/nexus.rc
+run_as_user="nexus"
+
+
+====================================================================
+
+install Tomcat server
+
+https://www.youtube.com/watch?v=1bnla8eYcaI
+
+wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.28/bin/apache-tomcat-10.1.28.tar.gz
+
+https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-10-on-ubuntu-20-04
+
+
+
+
+=======================================================================
+Install sonarqube-on-ubuntu
+
+https://hostnextra.com/learn/tutorials/how-to-install-sonarqube-on-ubuntu
