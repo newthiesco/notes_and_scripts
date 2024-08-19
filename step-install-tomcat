@@ -77,3 +77,6 @@ sudo systemctl enable tomcat
 
 access tomcat-server
 http://your_server_ip:8080
+
+how to install tomcat on ubuntu
+https://www.webhi.com/how-to/how-to-install-tomcat-on-ubuntu/
