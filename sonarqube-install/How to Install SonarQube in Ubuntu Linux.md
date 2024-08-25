@@ -123,3 +123,7 @@ sudo tail -f /opt/sonarqube/logs/sonar.log
 ```
 http://<IP>:9000
 ```
+
+
+
+https://gist.github.com/dmancloud/0abf6ad0cb16e1bce2e907f457c8fce9
