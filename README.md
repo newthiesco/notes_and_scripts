@@ -1,2 +1,2 @@
 
-Note and scripts
+Notes and scripts
